@@ -4,32 +4,24 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd69a4d71feb968a2f4f16c0a70800645
+class ComposerStaticInite8d1d4b1cf02aa47bd5982edd5fbd44b
 {
-    public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'PHPMailer\\PHPMailer\\' => 20,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'PHPMailer\\PHPMailer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
-        ),
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
+        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
+        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
+        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
+        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
+        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
+        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
+        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd69a4d71feb968a2f4f16c0a70800645::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd69a4d71feb968a2f4f16c0a70800645::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd69a4d71feb968a2f4f16c0a70800645::$classMap;
+            $loader->classMap = ComposerStaticInite8d1d4b1cf02aa47bd5982edd5fbd44b::$classMap;
 
         }, null, ClassLoader::class);
     }
